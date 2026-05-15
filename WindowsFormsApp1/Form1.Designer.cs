@@ -28,29 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnexcliuir = new System.Windows.Forms.Button();
             this.dgvCarro = new System.Windows.Forms.DataGridView();
-            this.nome = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbnome = new System.Windows.Forms.Label();
+            this.txttelefone = new System.Windows.Forms.TextBox();
             this.txtnome = new System.Windows.Forms.TextBox();
-            this.cbtelefone = new System.Windows.Forms.Label();
-            this.placa = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.lbtelefone = new System.Windows.Forms.Label();
+            this.lbPlaca = new System.Windows.Forms.Label();
+            this.textPlaca = new System.Windows.Forms.TextBox();
+            this.lbModelo = new System.Windows.Forms.Label();
+            this.txtModelo = new System.Windows.Forms.TextBox();
             this.btnConsultarLista = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dtpano = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lbMarca = new System.Windows.Forms.Label();
+            this.textMarca = new System.Windows.Forms.TextBox();
+            this.lbAno = new System.Windows.Forms.Label();
+            this.lbCor = new System.Windows.Forms.Label();
+            this.txtcor = new System.Windows.Forms.TextBox();
+            this.lbQuilometragem = new System.Windows.Forms.Label();
+            this.nudQuilometragem = new System.Windows.Forms.NumericUpDown();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.dtpAno = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuilometragem)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -71,6 +74,7 @@
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "btnEDITAR";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnConsultar
             // 
@@ -82,39 +86,39 @@
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // btnLimpar
+            // btnexcliuir
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(163, 316);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(156, 67);
-            this.btnLimpar.TabIndex = 3;
-            this.btnLimpar.Text = "btnEXCLUIR";
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            this.btnexcliuir.Location = new System.Drawing.Point(163, 316);
+            this.btnexcliuir.Name = "btnexcliuir";
+            this.btnexcliuir.Size = new System.Drawing.Size(156, 67);
+            this.btnexcliuir.TabIndex = 3;
+            this.btnexcliuir.Text = "btnEXCLUIR";
+            this.btnexcliuir.UseVisualStyleBackColor = true;
+            this.btnexcliuir.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // dgvCarro
             // 
             this.dgvCarro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCarro.Location = new System.Drawing.Point(351, 243);
+            this.dgvCarro.Location = new System.Drawing.Point(335, 243);
             this.dgvCarro.Name = "dgvCarro";
             this.dgvCarro.Size = new System.Drawing.Size(437, 195);
             this.dgvCarro.TabIndex = 4;
             // 
-            // nome
+            // lbnome
             // 
-            this.nome.AutoSize = true;
-            this.nome.Location = new System.Drawing.Point(25, 13);
-            this.nome.Name = "nome";
-            this.nome.Size = new System.Drawing.Size(36, 13);
-            this.nome.TabIndex = 5;
-            this.nome.Text = "nome:";
+            this.lbnome.AutoSize = true;
+            this.lbnome.Location = new System.Drawing.Point(25, 13);
+            this.lbnome.Name = "lbnome";
+            this.lbnome.Size = new System.Drawing.Size(36, 13);
+            this.lbnome.TabIndex = 5;
+            this.lbnome.Text = "nome:";
             // 
-            // textBox1
+            // txttelefone
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 20);
-            this.textBox1.TabIndex = 6;
+            this.txttelefone.Location = new System.Drawing.Point(91, 32);
+            this.txttelefone.Name = "txttelefone";
+            this.txttelefone.Size = new System.Drawing.Size(189, 20);
+            this.txttelefone.TabIndex = 6;
             // 
             // txtnome
             // 
@@ -123,50 +127,50 @@
             this.txtnome.Size = new System.Drawing.Size(189, 20);
             this.txtnome.TabIndex = 7;
             // 
-            // cbtelefone
+            // lbtelefone
             // 
-            this.cbtelefone.AutoSize = true;
-            this.cbtelefone.Location = new System.Drawing.Point(24, 39);
-            this.cbtelefone.Name = "cbtelefone";
-            this.cbtelefone.Size = new System.Drawing.Size(52, 13);
-            this.cbtelefone.TabIndex = 8;
-            this.cbtelefone.Text = "Telefone:";
+            this.lbtelefone.AutoSize = true;
+            this.lbtelefone.Location = new System.Drawing.Point(24, 39);
+            this.lbtelefone.Name = "lbtelefone";
+            this.lbtelefone.Size = new System.Drawing.Size(52, 13);
+            this.lbtelefone.TabIndex = 8;
+            this.lbtelefone.Text = "Telefone:";
             // 
-            // placa
+            // lbPlaca
             // 
-            this.placa.AutoSize = true;
-            this.placa.Location = new System.Drawing.Point(28, 65);
-            this.placa.Name = "placa";
-            this.placa.Size = new System.Drawing.Size(37, 13);
-            this.placa.TabIndex = 10;
-            this.placa.Text = "Placa:";
+            this.lbPlaca.AutoSize = true;
+            this.lbPlaca.Location = new System.Drawing.Point(28, 65);
+            this.lbPlaca.Name = "lbPlaca";
+            this.lbPlaca.Size = new System.Drawing.Size(37, 13);
+            this.lbPlaca.TabIndex = 10;
+            this.lbPlaca.Text = "Placa:";
             // 
-            // textBox3
+            // textPlaca
             // 
-            this.textBox3.Location = new System.Drawing.Point(91, 58);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(189, 20);
-            this.textBox3.TabIndex = 11;
+            this.textPlaca.Location = new System.Drawing.Point(91, 58);
+            this.textPlaca.Name = "textPlaca";
+            this.textPlaca.Size = new System.Drawing.Size(189, 20);
+            this.textPlaca.TabIndex = 11;
             // 
-            // label3
+            // lbModelo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Modelo:";
+            this.lbModelo.AutoSize = true;
+            this.lbModelo.Location = new System.Drawing.Point(24, 91);
+            this.lbModelo.Name = "lbModelo";
+            this.lbModelo.Size = new System.Drawing.Size(45, 13);
+            this.lbModelo.TabIndex = 12;
+            this.lbModelo.Text = "Modelo:";
             // 
-            // textBox4
+            // txtModelo
             // 
-            this.textBox4.Location = new System.Drawing.Point(91, 84);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(189, 20);
-            this.textBox4.TabIndex = 13;
+            this.txtModelo.Location = new System.Drawing.Point(91, 84);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(189, 20);
+            this.txtModelo.TabIndex = 13;
             // 
             // btnConsultarLista
             // 
-            this.btnConsultarLista.Location = new System.Drawing.Point(27, 392);
+            this.btnConsultarLista.Location = new System.Drawing.Point(27, 389);
             this.btnConsultarLista.Name = "btnConsultarLista";
             this.btnConsultarLista.Size = new System.Drawing.Size(270, 37);
             this.btnConsultarLista.TabIndex = 14;
@@ -174,94 +178,99 @@
             this.btnConsultarLista.UseVisualStyleBackColor = true;
             this.btnConsultarLista.Click += new System.EventHandler(this.btnConsultarLista_Click);
             // 
-            // label1
+            // lbMarca
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Marca:";
+            this.lbMarca.AutoSize = true;
+            this.lbMarca.Location = new System.Drawing.Point(25, 120);
+            this.lbMarca.Name = "lbMarca";
+            this.lbMarca.Size = new System.Drawing.Size(40, 13);
+            this.lbMarca.TabIndex = 15;
+            this.lbMarca.Text = "Marca:";
             // 
-            // textBox2
+            // textMarca
             // 
-            this.textBox2.Location = new System.Drawing.Point(91, 113);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 20);
-            this.textBox2.TabIndex = 16;
+            this.textMarca.Location = new System.Drawing.Point(91, 113);
+            this.textMarca.Name = "textMarca";
+            this.textMarca.Size = new System.Drawing.Size(189, 20);
+            this.textMarca.TabIndex = 16;
             // 
-            // dtpano
+            // lbAno
             // 
-            this.dtpano.AutoSize = true;
-            this.dtpano.Location = new System.Drawing.Point(32, 146);
-            this.dtpano.Name = "dtpano";
-            this.dtpano.Size = new System.Drawing.Size(29, 13);
-            this.dtpano.TabIndex = 17;
-            this.dtpano.Text = "Ano:";
+            this.lbAno.AutoSize = true;
+            this.lbAno.Location = new System.Drawing.Point(32, 146);
+            this.lbAno.Name = "lbAno";
+            this.lbAno.Size = new System.Drawing.Size(29, 13);
+            this.lbAno.TabIndex = 17;
+            this.lbAno.Text = "Ano:";
             // 
-            // label6
+            // lbCor
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 168);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 13);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Cor:";
+            this.lbCor.AutoSize = true;
+            this.lbCor.Location = new System.Drawing.Point(30, 168);
+            this.lbCor.Name = "lbCor";
+            this.lbCor.Size = new System.Drawing.Size(26, 13);
+            this.lbCor.TabIndex = 19;
+            this.lbCor.Text = "Cor:";
             // 
-            // textBox6
+            // txtcor
             // 
-            this.textBox6.Location = new System.Drawing.Point(91, 165);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(189, 20);
-            this.textBox6.TabIndex = 20;
+            this.txtcor.Location = new System.Drawing.Point(91, 165);
+            this.txtcor.Name = "txtcor";
+            this.txtcor.Size = new System.Drawing.Size(189, 20);
+            this.txtcor.TabIndex = 20;
             // 
-            // label7
+            // lbQuilometragem
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 191);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 13);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Quilometragem:";
+            this.lbQuilometragem.AutoSize = true;
+            this.lbQuilometragem.Location = new System.Drawing.Point(5, 191);
+            this.lbQuilometragem.Name = "lbQuilometragem";
+            this.lbQuilometragem.Size = new System.Drawing.Size(80, 13);
+            this.lbQuilometragem.TabIndex = 21;
+            this.lbQuilometragem.Text = "Quilometragem:";
             // 
-            // textBox7
+            // nudQuilometragem
             // 
-            this.textBox7.Location = new System.Drawing.Point(91, 191);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(189, 20);
-            this.textBox7.TabIndex = 22;
+            this.nudQuilometragem.Location = new System.Drawing.Point(91, 189);
+            this.nudQuilometragem.Name = "nudQuilometragem";
+            this.nudQuilometragem.Size = new System.Drawing.Size(189, 20);
+            this.nudQuilometragem.TabIndex = 24;
             // 
-            // dateTimePicker1
+            // contextMenuStrip1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(91, 140);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(189, 20);
-            this.dateTimePicker1.TabIndex = 23;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // dtpAno
+            // 
+            this.dtpAno.Location = new System.Drawing.Point(91, 139);
+            this.dtpAno.Name = "dtpAno";
+            this.dtpAno.Size = new System.Drawing.Size(228, 20);
+            this.dtpAno.TabIndex = 26;
             // 
             // Telasvelculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 441);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dtpano);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(832, 460);
+            this.Controls.Add(this.dtpAno);
+            this.Controls.Add(this.nudQuilometragem);
+            this.Controls.Add(this.lbQuilometragem);
+            this.Controls.Add(this.txtcor);
+            this.Controls.Add(this.lbCor);
+            this.Controls.Add(this.lbAno);
+            this.Controls.Add(this.textMarca);
+            this.Controls.Add(this.lbMarca);
             this.Controls.Add(this.btnConsultarLista);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.placa);
-            this.Controls.Add(this.cbtelefone);
+            this.Controls.Add(this.txtModelo);
+            this.Controls.Add(this.lbModelo);
+            this.Controls.Add(this.textPlaca);
+            this.Controls.Add(this.lbPlaca);
+            this.Controls.Add(this.lbtelefone);
             this.Controls.Add(this.txtnome);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.nome);
+            this.Controls.Add(this.txttelefone);
+            this.Controls.Add(this.lbnome);
             this.Controls.Add(this.dgvCarro);
-            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnexcliuir);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnSalvar);
@@ -269,6 +278,7 @@
             this.Text = "Tela pricinpal";
             this.Load += new System.EventHandler(this.Telasvelculos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuilometragem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,25 +289,26 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnexcliuir;
         private System.Windows.Forms.DataGridView dgvCarro;
-        private System.Windows.Forms.Label nome;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbnome;
+        private System.Windows.Forms.TextBox txttelefone;
         private System.Windows.Forms.TextBox txtnome;
-        private System.Windows.Forms.Label cbtelefone;
-        private System.Windows.Forms.Label placa;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label lbtelefone;
+        private System.Windows.Forms.Label lbPlaca;
+        private System.Windows.Forms.TextBox textPlaca;
+        private System.Windows.Forms.Label lbModelo;
+        private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.Button btnConsultarLista;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label dtpano;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lbMarca;
+        private System.Windows.Forms.TextBox textMarca;
+        private System.Windows.Forms.Label lbAno;
+        private System.Windows.Forms.Label lbCor;
+        private System.Windows.Forms.TextBox txtcor;
+        private System.Windows.Forms.Label lbQuilometragem;
+        private System.Windows.Forms.NumericUpDown nudQuilometragem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.DateTimePicker dtpAno;
     }
 }
 
