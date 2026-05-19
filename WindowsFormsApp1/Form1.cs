@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
             using (MySqlConnection conn = new MySqlConnection(DADOS_CONEXAO))
             {
                 conn.Open();
-                string scriptDelete = "DELETE FROM tb_cadastro where nome = @nome";
+                string scriptDelete = "DELETE FROM tb_carros  where nome = @nome";
                 using (MySqlCommand comando = new MySqlCommand(scriptDelete, conn))
                 {
                     comando.Parameters.AddWithValue("@placa", campoplaca);
